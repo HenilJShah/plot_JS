@@ -1,0 +1,110 @@
+<!-- https://codepen.io/apexcharts/pen/eYJmzJd -->
+<!-- https://codepen.io/apexcharts/pen/NWrPyJY -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>codepen</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.0/apexcharts.min.css"
+        integrity="sha512-H6KANMpZQKsK9c09UqdcQv02JTiZ/hMVwxkcbDLrp125CR884wwEdnWDm+Yuo6tihuC/cizLYWAjMZi0xAfGig=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.0/apexcharts.min.js"
+        integrity="sha512-/r8adyIvOBvlusok7gzfMGoVhvZpijnrlCS3VP5rL0QhOt2js7XB8FJXb2m9lYXIa6XJJdwSvwBkYPrVABlmuA=="
+        crossorigin="anonymous"></script>
+    <style>
+        #chart {
+            max-width: 650px;
+            margin: 35px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="chart">
+    </div>
+</body>
+<script>
+    var options = {
+        series: [
+            {
+                name: "Yearly Profit",
+                data: [
+                    {
+                        x: "2011",
+                        y: 1292
+                    },
+                    {
+                        x: "2012",
+                        y: 4432
+                    },
+                    {
+                        x: "2013",
+                        y: 5423,
+                        fillColor: "#EB8C87",
+                    },
+                    {
+                        x: "2014",
+                        y: 6653
+                    },
+                    {
+                        x: "2015",
+                        y: 8133,
+                        fillColor: "#EB8C87",
+                    },
+                    {
+                        x: "2016",
+                        y: 7132
+                    },
+                    {
+                        x: "2017",
+                        y: 7332
+                    },
+                    {
+                        x: "2018",
+                        y: 6553
+                    }
+                ]
+            }
+        ],
+        chart: {
+            height: 350,
+            type: "bar"
+        },
+
+
+
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: "60%"
+            }
+        },
+
+
+        stroke: {
+            show: false,
+        },
+
+        
+        dataLabels: {
+            enabled: false
+        },
+        fill: {
+            opacity: 1
+        },
+        xaxis: {
+            type: "datetime"
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+</script>
+
+</html>
